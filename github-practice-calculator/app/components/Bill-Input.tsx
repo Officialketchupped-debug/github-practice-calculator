@@ -6,11 +6,11 @@ interface BillInputProps {
 export default function BillInput({ bill, setBill }: BillInputProps) {
   return (
     <div>
-      <label className="block text-sm font-semibold mb-2 text-[hsl(186,14%,43%)]">
+      <label className="block text-sm font-semibold mb-2 text-grey-500">
         Bill
       </label>
       <div className="relative">
-        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl text-[hsl(184,14%,56%)]">
+        <span className="absolute left-4 top-1/2 -translate-y-1/2 text-xl text-grey-400">
           $
         </span>
         <input
@@ -18,12 +18,9 @@ export default function BillInput({ bill, setBill }: BillInputProps) {
           placeholder="0"
           value={bill}
           onChange={(e) => setBill(e.target.value)}
-          className="pl-8 w-full text-right text-2xl font-bold border-2 rounded-md outline-none"
-          style={{
-            backgroundColor: "hsl(189,47%,97%)",
-            borderColor: bill ? "hsl(172,67%,45%)" : "hsl(185,41%,84%)",
-            color: "hsl(183,100%,15%)",
-          }}
+          className={`pl-8 w-full text-right text-2xl font-bold border-2 rounded-md outline-none bg-grey-50 text-green-900 ${
+            bill ? "border-green-400" : "border-grey-200"
+          }`}
         />
       </div>
     </div>

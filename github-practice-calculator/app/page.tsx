@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import Header from "@/app/components/Header";
 import BillInput from "@/app/components/Bill-Input";
@@ -35,12 +35,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[hsl(185,41%,84%)]">
-      <div className="container max-w-4xl mx-auto px-4 py-1">
+    <div className="min-h-screen bg-grey-200">
+      <div className="container max-w-4xl mx-auto px-4 py-8">
         <Header />
         <div className="bg-white rounded-3xl p-6 md:p-8 shadow-lg max-w-2xl mx-auto">
           <div className="grid md:grid-cols-2 gap-4">
-
             <div className="space-y-1">
               <BillInput bill={bill} setBill={setBill} />
               <TipSelection
